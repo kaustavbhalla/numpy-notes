@@ -3,7 +3,7 @@ print(np.__version__)
 
 #---------------------------------------------------------------------------------------#
 #Python Native Lists vs. Numpy Arrays
-
+#NOTE: numpy arrays require a consistent number of elements within each of their subset lists
 myNativeList = [1,2,3]
 myNativeList *= 2 #Duplicates Elements
 print(myNativeList) #Output: [1,2,3,1,2,3]
@@ -21,3 +21,19 @@ print(repeatedArray)#Output: [1 2 3 4 1 2 3 4]
 
 #------------------------------------------------------------------------------------------#
 #Numpy Multidimensional Arrays
+
+#Zero Dimension Arrays
+Zeroarray = np.array("A") #0 Dimension array
+print(Zeroarray.ndim) #ndim attribute returns the dimension of numpy arrays
+
+#One Dimension Array
+OneArray = np.array(["A", "B", "C"]) #1 Dimension array
+print(OneArray.ndim)
+
+#Two Dimension Array
+TwoArray = np.array([["A", "B", "C"],
+                     ["D", "E", "F"],
+                     ["G", "H", "I"]]) #2 Dimension array
+print(TwoArray.ndim)
+
+#And similarly more can be defined
